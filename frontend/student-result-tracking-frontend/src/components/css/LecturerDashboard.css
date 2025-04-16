@@ -1,0 +1,140 @@
+.lecturer-dashboard { 
+  display: flex;
+  min-height: 100vh;
+}
+  
+.lecturer-sidebar {
+  width: 250px;
+  background-color: #1a237e; 
+  color: white;
+  transition: all 0.3s;
+  position: fixed;
+  height: 100vh;
+}
+
+.lecturer-sidebar.collapsed {
+  width: 60px;
+}
+
+.lecturer-sidebar-header {
+  padding: 20px;
+  background-color: #0d47a1;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav {
+  padding: 15px 0;
+}
+
+.lecturer-sidebar .nav-link {
+  color: #bbdefb;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.lecturer-sidebar .nav-link:hover, 
+.lecturer-sidebar .nav-link.active {
+  color: white;
+  background-color: #303f9f;
+  text-decoration: none;
+}
+
+.lecturer-sidebar .nav-link.active {
+  border-left: 4px solid #bbdefb;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.lecturer-sidebar.collapsed .icon {
+  margin-right: 0;
+}
+
+.lecturer-main-content {
+  flex: 1;
+  margin-left: 250px;
+  transition: all 0.3s;
+}
+
+.lecturer-sidebar.collapsed + .lecturer-main-content {
+  margin-left: 60px;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.user-avatar:hover {
+  background: #e2e6ea;
+}
+
+.content-area {
+  padding: 20px;
+}
+
+.stat-card {
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.flex-column {
+  flex-direction: column !important;
+  padding-top: inherit;
+}
+
+@media (max-width: 768px) {
+  .lecturer-sidebar {
+    width: 60px;
+  }
+  
+  .lecturer-sidebar.collapsed {
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .lecturer-main-content {
+    margin-left: 60px;
+  }
+  
+  .lecturer-sidebar.collapsed + .lecturer-main-content {
+    margin-left: 0;
+  }
+}
