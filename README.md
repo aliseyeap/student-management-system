@@ -98,7 +98,7 @@ spring.application.name=student-result-tracking-backend
 # Database
 spring.datasource.url=jdbc:mysql://localhost:3306/srt_db?createDatabaseIfNotExist=true
 spring.datasource.username=root
-spring.datasource.password=password
+spring.datasource.password=your_password_here
 spring.jpa.hibernate.ddl-auto=update
 
 # JWT Security
